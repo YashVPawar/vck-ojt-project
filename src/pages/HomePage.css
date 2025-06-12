@@ -1,0 +1,184 @@
+.home-scroll-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 2rem;
+  width: 100%;
+  min-height: calc(100vh - 4rem);
+  border: 1px solid #000;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #e2f1f2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap; /* lets items wrap on smaller screens */
+  gap: 1rem;
+}
+
+.flex-item {
+  flex: 1 1 300px; /* grow, shrink, base width */
+}
+
+
+.home-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 1rem;
+  box-shadow: rgb(31, 135, 220);
+  filter: brightness(0.7);
+}
+
+.home-subtext {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: center; /* ✅ Center alignment */
+}
+
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.cta-button {
+  background-color: #28a745;
+  color: white;
+  padding: 0.5rem 1rem;       /* Smaller padding */
+  font-size: 1rem;            /* Smaller text */
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+
+}
+
+.cta-button:hover {
+  background-color: #218838;
+}
+
+.banner-container {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  isolation: isolate;
+
+}
+
+.banner-container::before {
+  content: "";
+  position: absolute;
+  filter: brightness();
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/Images/college-banner-.png');
+  background-size: 1000px 400px;
+  background-position: center;
+  filter: blur(2px);
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+.banner-container h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.banner-container p {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.cta-button {
+  margin-top: 1.5rem;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.gallery-image {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.02);
+}
+.taller-image {
+  height: 235px;         /* Increase to your desired height */
+  object-fit: cover;  
+}
+.button-wrapper {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .home-scroll-container {
+    padding: 1rem;
+  }
+
+  .banner-container h1 {
+    font-size: 2rem;
+  }
+
+  .banner-container p {
+    font-size: 1rem;
+  }
+
+  .flex-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-container p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
