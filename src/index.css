@@ -24,9 +24,11 @@ a:hover {
 }
 
 body {
-  margin: 0 auto;
-  min-width: 320px;
-  min-height: 100vh;
+  margin: 0;
+    overflow: hidden;
+
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
 }
 
 h1 {
