@@ -1,10 +1,27 @@
 .contact-scroll-container {
-  padding: 2rem;
+  /* padding: 2rem;
   margin: 1rem auto;
   max-width: 900px;
   background-color: #f0f9ff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
+  box-sizing: border-box; */
+   overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  width: 100%;
+  height: 500px;
+  border: 1px solid #000;
+  justify-content:center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #e2f1f2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+  max-width: 960px;
   box-sizing: border-box;
 }
 
